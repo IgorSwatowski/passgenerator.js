@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<!-- META START -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" CONTENT="ie=edge">
+	<!-- META END -->
+
+    <title>Password Generator</title>
+
+    <!-- LINKS START -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- LINKS END -->
+
+</head>
+
+<body>
+	<div class="container-fluid">
+        <h3 class="col-md-6 col-lg-12 text-center">Password Generator</h3>
+            <div class="information col-md-6 col-lg-12">
+            <h3>Instruction: </h3><br>
+            1. Move the slider to increase the password length <br>
+            2. Click generate to generate the password <br>
+            3. The maximum password length can be 30 <br><br><br>
+            </div>
+            <div class="generator col-md-6 col-lg-12 text-center">
+            <input type="text" id="display">
+            <input type="range" min="0" max="30" name="passwordLength" id="passwordLength">
+            <button onclick="passwdGenerate()">Generate</button>
+            <div id="length"></div>
+            </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
