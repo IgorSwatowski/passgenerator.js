@@ -6,7 +6,6 @@ body {
   h3 {
     margin-top: 40px;
     letter-spacing: 4px;
-
   }
   .nav-item{
       color: #fff !important;
@@ -51,7 +50,13 @@ body {
     margin-top: 30px;
     margin-bottom: 30px;
     width: 100%;
+    outline: none;
+    -webkit-appearance: none;
+    background:#3f3e3e;
+    box-shadow: 0 0 10px #3f3e3e, 0 0 5px #3f3e3e;
+    border-radius: 25%;
   }
+
   
   button {
     background-color: black;
