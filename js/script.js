@@ -4,8 +4,8 @@ function passwdGenerate(){
     let characters = "ABCDEFGHIJKLMNOPQRSTUVWZYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+";
     let password = "";
 
-    for(var i = 0; i <= getPassword; i++){
-        password = password + characters.charAt(Math.floor(Math.random() * Math.floor(characters.length - 1)));
+    for(var i = 1; i <= getPassword; i++){
+        password = password + characters.charAt(Math.floor(Math.random() * Math.floor(characters.length)));
     }
     document.getElementById("display").value = password;
 }
@@ -13,11 +13,11 @@ function passwdGenerate(){
     document.getElementById("length").innerHTML = "Length: 15";
     document.getElementById("passwordLength").oninput = function(){
 
-    if(document.getElementById("passwordLength").value > 0){
+    if(document.getElementById("passwordLength").value >=1){
         document.getElementById("length").innerHTML = "Length: " + document.getElementById("passwordLength").value;
     }
     else{
-        document.getElementById("length").innerHTML = "Length: 1";
+        document.getElementById("length").innerHTML = "Length: 0";
     }
 
 }
