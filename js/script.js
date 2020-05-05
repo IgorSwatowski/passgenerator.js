@@ -1,11 +1,11 @@
 function passwdGenerate(){
 
-    let getPassword = document.getElementById("passwordLength").value;
-    let characters = "ABCDEFGHIJKLMNOPQRSTUVWZYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+";
+    const getPassword = document.getElementById("passwordLength").value;
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWZYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+";
     let password = "";
 
     for(var i = 1; i <= getPassword; i++){
-        password = password + characters.charAt(Math.floor(Math.random() * Math.floor(characters.length)));
+        password += characters.charAt(Math.floor(Math.random() * Math.floor(characters.length)));
     }
     document.getElementById("display").value = password;
 }
