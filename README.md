@@ -1,12 +1,24 @@
-# Pass Generator
+# passgen
 
-# Technologies used
+## Project setup
+```
+npm install
+```
 
-- HTML5
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-- CSS3
+### Compiles and minifies for production
+```
+npm run build
+```
 
-- JavaScript
+### Lints and fixes files
+```
+npm run lint
+```
 
-- Bootstrap 4
-
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
