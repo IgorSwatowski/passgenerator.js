@@ -8,10 +8,10 @@
             3. The maximum password length can be 30 <br><br><br>
             </div>
             <div class="generator col-md-6 col-lg-12 text-center">
-            <input type="text" id="display">
-            <input type="range" min="0" max="30" name="passwordLength" id="passwordLength">
+            <input type="text" id="display" v-model="display">
+            <input type="range" min="0" max="30" name="passwordLength" id="passwordLength" v-model="passwordLength">
             <button @click="passwdGenerate()">Generate</button>
-            <div id="length"></div>
+            <div id="length">Length: {{passwordLength}}</div>
             </div>
     </div>
 </template>
@@ -21,9 +21,27 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'bootstrap-vue/dist/bootstrap-vue.min.js'
 
+const characters = "ABCDEFGHIJKLMNOPQRSTUVWZYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+";
+let password = "";
+    
 export default {
     name: 'Generator',
+    data(){
+        return {
+            passwordLength: '15',
+            display: '',
+        }
+    },
+    methods: {
+        passwdGenerate(){
+             for(let i = 1; i <= this.passwordLength; i++){
+             password += characters.charAt(Math.floor(Math.random() * Math.floor(characters.length)));
+             }
+             this.display = password;
+        }
+    }
 }
+
 </script>
 
 <style lang="scss" scoped>
