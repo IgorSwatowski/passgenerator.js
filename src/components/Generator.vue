@@ -22,7 +22,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'bootstrap-vue/dist/bootstrap-vue.min.js'
 
 const characters = "ABCDEFGHIJKLMNOPQRSTUVWZYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+";
-let password = "";
+
     
 export default {
     name: 'Generator',
@@ -34,6 +34,7 @@ export default {
     },
     methods: {
         passwdGenerate(){
+             let password = "";
              for(let i = 1; i <= this.passwordLength; i++){
              password += characters.charAt(Math.floor(Math.random() * Math.floor(characters.length)));
              }
